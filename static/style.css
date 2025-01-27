@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.date-picker {
+    margin-bottom: 20px;
+}
+
+.location-buttons button, .game-number-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.location-buttons button.selected, .game-number-buttons button.selected {
+    background-color: #007BFF;
+    color: white;
+}
+
+.large-input {
+    width: 200px;
+    height: 300px;
+    font-size: 24px;
+}
