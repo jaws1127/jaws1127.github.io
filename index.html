@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Picker Example</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>날짜 선택</h2>
+    <div class="date-picker">
+        <label for="date">날짜: </label>
+        <input type="date" id="date" onclick="setTodayDate()" />
+    </div>
+
+    <h2>경기 위치</h2>
+    <div class="location-buttons">
+        <button type="button" onclick="selectLocation('서울')">서울</button>
+        <button type="button" onclick="selectLocation('부산')">부산</button>
+        <button type="button" onclick="selectLocation('제주')">제주</button>
+        <button type="button" onclick="selectLocation('나카야마')">나카야마</button>
+        <button type="button" onclick="selectLocation('츄코')">츄코</button>
+        <button type="button" onclick="selectLocation('도쿄')">도쿄</button>
+        <button type="button" onclick="selectLocation('교토')">교토</button>
+        <button type="button" onclick="selectLocation('고쿠라')">고쿠라</button>
+    </div>
+
+    <h2>경기번호</h2>
+    <div class="game-number-buttons">
+        <button type="button" onclick="selectGameNumber(1)">1</button>
+        <button type="button" onclick="selectGameNumber(2)">2</button>
+        <button type="button" onclick="selectGameNumber(3)">3</button>
+        <button type="button" onclick="selectGameNumber(4)">4</button>
+        <button type="button" onclick="selectGameNumber(5)">5</button>
+        <button type="button" onclick="selectGameNumber(6)">6</button>
+        <button type="button" onclick="selectGameNumber(7)">7</button>
+        <button type="button" onclick="selectGameNumber(8)">8</button>
+        <button type="button" onclick="selectGameNumber(9)">9</button>
+        <button type="button" onclick="selectGameNumber(10)">10</button>
+        <button type="button" onclick="selectGameNumber(11)">11</button>
+        <button type="button" onclick="selectGameNumber(12)">12</button>
+        <button type="button" onclick="selectGameNumber(13)">13</button>
+        <button type="button" onclick="selectGameNumber(14)">14</button>
+    </div>
+
+    <h2>마번번호</h2>
+    <div class="marbung-inputs" style="display: flex; gap: 20px;">
+        <div>
+            <label for="fifteen-min">15분전</label>
+            <input type="text" id="fifteen-min" class="large-input" placeholder="15분전 마번번호 입력" />
+        </div>
+        <div>
+            <label for="five-min">5분전</label>
+            <input type="text" id="five-min" class="large-input" placeholder="5분전 마번번호 입력" />
+        </div>
+    </div>
+
+    <div class="action-buttons" style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+        <button type="button" onclick="calculateOddsChange()">실시간 확인</button>
+        <button type="button" onclick="sendData()">보내기</button>
+    </div>
+
+    <div id="odds-result" style="margin-top: 20px; text-align: center;">
+        <h3>결과 <span id="match-info"></span></h3>
+        
+        <table id="result-table" border="1" style="margin: 0 auto; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>마번</th>
+                    <th>15분전</th>
+                    <th>5분전</th>
+                    <th>변화율</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="responseMessage" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
+
+
+    <!-- Link to JavaScript file -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
